@@ -35,16 +35,38 @@ console.log(removeDuplicates([1, 3, 7, 4, 5, 1, ]));
 
 //3
 function capitalizeFirstLetter(s) {
-const arrNew = s.split(" ")
-for(i=0; i < arrNew.length; i++){
-    if(arrNew[-1] =="."){
-        arrNew[0].toA
+    const arrNew = s.split(" ")
+    console.log(arrNew);
+    
+    for(let i=0; i < arrNew.length; i++){
+        if(arrNew[i][arrNew[i].length - 1] !=="."){
+            arrNew[i] [0].toUpperCase() + arrNew[i].slice(1,arrNew[i].length-1)
+        }
+    return arrNew.join(" ")
+
+}
+}
+console.log(capitalizeFirstLetter("bbobihbvyivu.  kiki"))
+
+
+//4
+function loadTasks() {
+    const tasksString = localStorage.getItem("tasks");
+    let tasks = [];
+    if (tasksString) {
+        tasks.add(JSON.parse(tasksString));
     }
-}
+    return tasks;
 }
 
 
-console.log(capitalizeFirstLetter("bbobihbvyivu"))
+function saveTasks() {
+    const tasks = [];
+        tasks.push({ id: text, task: text });
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+
 
 
 
